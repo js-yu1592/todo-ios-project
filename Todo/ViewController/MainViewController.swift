@@ -9,7 +9,7 @@ import UIKit
 import FSCalendar
 import JJFloatingActionButton
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     // MARK: - @IBOulet properties
     @IBOutlet weak var tableView: UITableView!
@@ -103,6 +103,9 @@ class ViewController: UIViewController {
         }
         actionButton.addItem(title: "", image: UIImage(systemName: "pencil.circle.fill")?.withRenderingMode(.alwaysTemplate)) { item in
             print("item2 clicked")
+            
+            let noteVC = self.storyboard?.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
+            self.present(noteVC, animated: true, completion: nil)
         }
     }
     
@@ -120,7 +123,7 @@ class ViewController: UIViewController {
 }
 
 // MARK:- UITableViewDelegate
-extension ViewController: UITableViewDelegate {
+extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 {
@@ -135,29 +138,29 @@ extension ViewController: UITableViewDelegate {
 }
 
 // MARK:- UITableViewDataSource
-extension ViewController: UITableViewDataSource {
+extension MainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return [2,20][section]
+        return [1,10][section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            let identifier = ["cell_month", "cell_week"][indexPath.row]
-            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
-            return cell
-        } else {
+//        if indexPath.section == 0 {
+//            let identifier = ["cell_month", "cell_week"][indexPath.row]
+//            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
+//            return cell
+//        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
             return cell
-        }
+//        }
     }
 }
 
 // MARK:- UIGestureRecognizerDelegate
-extension ViewController: UIGestureRecognizerDelegate {
+extension MainViewController: UIGestureRecognizerDelegate {
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let shouldBegin = self.tableView.contentOffset.y <= -self.tableView.contentInset.top
         if shouldBegin {
@@ -173,7 +176,7 @@ extension ViewController: UIGestureRecognizerDelegate {
     }
 }
 // MARK:- FSCalendarDelegate, FSCalendarDataSource
-extension ViewController: FSCalendarDelegate, FSCalendarDataSource {
+extension MainViewController: FSCalendarDelegate, FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         self.calendarHeightConstraint.constant = bounds.height
         self.view.layoutIfNeeded()
