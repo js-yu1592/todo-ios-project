@@ -15,6 +15,9 @@
 		2454B4EB25D2D8DB00BE9794 /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2454B4E925D2D8DB00BE9794 /* Todo.xcdatamodeld */; };
 		2454B4ED25D2D8DC00BE9794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4EC25D2D8DC00BE9794 /* Assets.xcassets */; };
 		2454B4F025D2D8DC00BE9794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4EE25D2D8DC00BE9794 /* LaunchScreen.storyboard */; };
+		24A00EB825D792C90066506B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A00EB725D792C80066506B /* PersistenceManager.swift */; };
+		24A00EBB25D794FB0066506B /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A00EBA25D794FB0066506B /* TodoItem.swift */; };
+		24A00EBE25D7F8900066506B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A00EBD25D7F8900066506B /* DetailViewController.swift */; };
 		24CCC91725D6C46B00CDC994 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC91625D6C46B00CDC994 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		2454B4EC25D2D8DC00BE9794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2454B4EF25D2D8DC00BE9794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2454B4F125D2D8DC00BE9794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A00EB725D792C80066506B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		24A00EBA25D794FB0066506B /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		24A00EBD25D7F8900066506B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		24CCC91625D6C46B00CDC994 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		6A3BEC41567FDAEC2A05AC02 /* Pods-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.debug.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		DC663AF16782228624A2E82B /* Pods-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.release.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				2454B4E925D2D8DB00BE9794 /* Todo.xcdatamodeld */,
+				24A00EB725D792C80066506B /* PersistenceManager.swift */,
+				24A00EBA25D794FB0066506B /* TodoItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +107,7 @@
 			children = (
 				2454B4E425D2D8DB00BE9794 /* MainViewController.swift */,
 				24CCC91625D6C46B00CDC994 /* NoteViewController.swift */,
+				24A00EBD25D7F8900066506B /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -243,11 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A00EBB25D794FB0066506B /* TodoItem.swift in Sources */,
 				2454B4E525D2D8DB00BE9794 /* MainViewController.swift in Sources */,
 				2454B4E125D2D8DB00BE9794 /* AppDelegate.swift in Sources */,
 				2454B4E325D2D8DB00BE9794 /* SceneDelegate.swift in Sources */,
+				24A00EB825D792C90066506B /* PersistenceManager.swift in Sources */,
 				24CCC91725D6C46B00CDC994 /* NoteViewController.swift in Sources */,
 				2454B4EB25D2D8DB00BE9794 /* Todo.xcdatamodeld in Sources */,
+				24A00EBE25D7F8900066506B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

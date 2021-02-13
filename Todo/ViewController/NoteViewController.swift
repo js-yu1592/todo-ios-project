@@ -11,12 +11,50 @@ import UIKit
 class NoteViewController: UIViewController {
     
     @IBOutlet weak var noteTextView: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print("NoteViewController - viewDidLoad() called")
         
         noteTextView.layer.borderWidth = 0.5
         noteTextView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        noteTextView.delegate = self
+        noteTextView.text = "Add notes"
+        noteTextView.textColor = UIColor.lightGray
+        
+    }
+    
+    @IBAction func onCloseBtnClicked(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onCompleteBtnClicked(_ sender: UIButton) {
+        if noteTextView.text == "" {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            print(noteTextView.text!)
+            let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+            mainVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.textLabel?.text = noteTextView.text
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
+    
+}
+
+// MARK: - UITextViewDelegate
+extension NoteViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Add notes"
+            textView.textColor = UIColor.lightGray
+        }
     }
 }

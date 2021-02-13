@@ -8,6 +8,7 @@
 import UIKit
 import FSCalendar
 import JJFloatingActionButton
+import CoreData
 
 class MainViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class MainViewController: UIViewController {
     // MARK: - properties
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
     
@@ -42,10 +43,14 @@ class MainViewController: UIViewController {
         return button
     }()
     
+    let request: NSFetchRequest<Todo> = Todo.fetchRequest()
+    
+
+    
     // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+    
         self.tableView.addSubview(actionButton)
         self.calendar.select(Date())
         
@@ -81,6 +86,7 @@ class MainViewController: UIViewController {
         
     }
     
+    // 액션 버튼
     func onActionBtnClicked() {
         actionButton.addItem(title: "", image: UIImage(systemName: "square.and.pencil")?.withRenderingMode(.alwaysTemplate)) { item in
             print("item1 clicked")
@@ -95,7 +101,14 @@ class MainViewController: UIViewController {
                 if textField.text == "" {
                     print("값이 없음")
                 } else {
-                    print("inputValue : \(textField.text)")
+                    print(textField.text!)
+                    /// CoreData에 저장할 객체
+                    let todoItem = TodoItem(content: textField.text!, date: self.dateFormatter.string(from: Date()))
+                    PersistenceManager.shared.insertItem(item: todoItem)
+                    
+                    // 동적으로 셀을 추가함
+                    // 테이블뷰 전체를 리로드하기보다는 섹션만 리로드
+                    self.tableView.reloadSections(IndexSet(1...1), with: UITableView.RowAnimation.automatic)
                 }
             })
             alertController.addAction(submitBtnAction)
@@ -109,18 +122,18 @@ class MainViewController: UIViewController {
         }
     }
     
-    
+}
     // MARK:- @IBAction function
     
-    @IBAction func toggleClicked(sender: AnyObject) {
-        if self.calendar.scope == .month {
-            self.calendar.setScope(.week, animated: self.animationSwitch.isOn)
-        } else {
-            self.calendar.setScope(.month, animated: self.animationSwitch.isOn)
-        }
-    }
-
-}
+//    @IBAction func toggleClicked(sender: AnyObject) {
+//        if self.calendar.scope == .month {
+//            self.calendar.setScope(.week, animated: self.animationSwitch.isOn)
+//        } else {
+//            self.calendar.setScope(.month, animated: self.animationSwitch.isOn)
+//        }
+//    }
+//
+//}
 
 // MARK:- UITableViewDelegate
 extension MainViewController: UITableViewDelegate {
@@ -133,7 +146,7 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
+        return 5
     }
 }
 
@@ -144,18 +157,21 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return [1,10][section]
+        return [1,(PersistenceManager.shared.count(request: request))!][section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.section == 0 {
-//            let identifier = ["cell_month", "cell_week"][indexPath.row]
-//            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
-//            return cell
-//        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        if indexPath.section == 0 {
+            let identifier = ["noteCell"][indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
+            cell.textLabel?.text = "Today's note"
             return cell
-//        }
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell")!
+            let fetchResult = PersistenceManager.shared.fetch(request: request)
+            cell.textLabel?.text = fetchResult[indexPath.row].content
+            return cell
+        }
     }
 }
 
