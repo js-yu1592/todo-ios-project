@@ -8,6 +8,6 @@
 import Foundation
 
 struct TodoItem {
-    var content: String
-    var date: String
+    
+    var events : [String : [String]]
 }

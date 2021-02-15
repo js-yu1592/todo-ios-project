@@ -46,8 +46,7 @@ class PersistenceManager {
         if let entity = entity {
             let managedObject = NSManagedObject(entity: entity, insertInto: self.context)
             
-            managedObject.setValue(item.content, forKey: "content")
-            managedObject.setValue(item.date, forKey: "date")
+            managedObject.setValue(item.events, forKey: "events")
             
             do {
                 try self.context.save()

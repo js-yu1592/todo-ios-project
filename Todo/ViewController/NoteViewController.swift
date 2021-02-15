@@ -11,6 +11,8 @@ import UIKit
 class NoteViewController: UIViewController {
     
     @IBOutlet weak var noteTextView: UITextView!
+    
+    var completeDelegate: CompleteDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +35,9 @@ class NoteViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         } else {
             print(noteTextView.text!)
-            let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-            mainVC.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.textLabel?.text = noteTextView.text
             self.dismiss(animated: true, completion: nil)
+            completeDelegate?.onCompleteButtonClicked(noteData: noteTextView.text)
+            
         }
         
     }

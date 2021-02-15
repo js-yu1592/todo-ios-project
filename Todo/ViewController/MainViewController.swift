@@ -103,7 +103,8 @@ class MainViewController: UIViewController {
                 } else {
                     print(textField.text!)
                     /// CoreData에 저장할 객체
-                    let todoItem = TodoItem(content: textField.text!, date: self.dateFormatter.string(from: Date()))
+//                    let todoItem = TodoItem(content: textField.text!, date: self.dateFormatter.string(from: Date()))
+                    let todoItem = TodoItem(
                     PersistenceManager.shared.insertItem(item: todoItem)
                     
                     // 동적으로 셀을 추가함
@@ -118,6 +119,7 @@ class MainViewController: UIViewController {
             print("item2 clicked")
             
             let noteVC = self.storyboard?.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
+            noteVC.completeDelegate = self
             self.present(noteVC, animated: true, completion: nil)
         }
     }
@@ -210,4 +212,14 @@ extension MainViewController: FSCalendarDelegate, FSCalendarDataSource {
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
+}
+// MARK: - CompleteDelegate
+extension MainViewController: CompleteDelegate {
+    func onCompleteButtonClicked(noteData: String) {
+        print("CompleteDelegate - onCompleteButtonClicked() called / noteData : \(noteData)")
+        self.tableView.cellForRow(at: IndexPath(row: 0, section: 0))?.textLabel?.text = noteData
+        self.tableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
+    }
+    
+    
 }
