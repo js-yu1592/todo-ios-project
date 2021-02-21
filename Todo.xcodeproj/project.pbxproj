@@ -13,12 +13,12 @@
 		2454B4E325D2D8DB00BE9794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454B4E225D2D8DB00BE9794 /* SceneDelegate.swift */; };
 		2454B4E525D2D8DB00BE9794 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454B4E425D2D8DB00BE9794 /* MainViewController.swift */; };
 		2454B4E825D2D8DB00BE9794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4E625D2D8DB00BE9794 /* Main.storyboard */; };
-		2454B4EB25D2D8DB00BE9794 /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2454B4E925D2D8DB00BE9794 /* Todo.xcdatamodeld */; };
 		2454B4ED25D2D8DC00BE9794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4EC25D2D8DC00BE9794 /* Assets.xcassets */; };
 		2454B4F025D2D8DC00BE9794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4EE25D2D8DC00BE9794 /* LaunchScreen.storyboard */; };
-		24A00EB825D792C90066506B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A00EB725D792C80066506B /* PersistenceManager.swift */; };
-		24A00EBB25D794FB0066506B /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A00EBA25D794FB0066506B /* TodoItem.swift */; };
+		248156BD25E20C5C0029249A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248156BC25E20C5C0029249A /* CalendarViewController.swift */; };
+		248156C025E20C6A0029249A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248156BF25E20C6A0029249A /* TableViewController.swift */; };
 		24A00EBE25D7F8900066506B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A00EBD25D7F8900066506B /* DetailViewController.swift */; };
+		24A17C8625DE533F0015AAC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24A17C8525DE533F0015AAC4 /* GoogleService-Info.plist */; };
 		24CCC91725D6C46B00CDC994 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC91625D6C46B00CDC994 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,13 +30,13 @@
 		2454B4E225D2D8DB00BE9794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2454B4E425D2D8DB00BE9794 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2454B4E725D2D8DB00BE9794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2454B4EA25D2D8DB00BE9794 /* Todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todo.xcdatamodel; sourceTree = "<group>"; };
 		2454B4EC25D2D8DC00BE9794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2454B4EF25D2D8DC00BE9794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2454B4F125D2D8DC00BE9794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24A00EB725D792C80066506B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
-		24A00EBA25D794FB0066506B /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		248156BC25E20C5C0029249A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		248156BF25E20C6A0029249A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		24A00EBD25D7F8900066506B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		24A17C8525DE533F0015AAC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24CCC91625D6C46B00CDC994 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		6A3BEC41567FDAEC2A05AC02 /* Pods-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.debug.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		DC663AF16782228624A2E82B /* Pods-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.release.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,12 +77,22 @@
 			children = (
 				24CCC91425D6C10200CDC994 /* View */,
 				24CCC91225D6C0E200CDC994 /* ViewController */,
-				24CCC91125D6C0D400CDC994 /* Model */,
 				24CCC90F25D6C0BC00CDC994 /* AppDelegate */,
 				2454B4EC25D2D8DC00BE9794 /* Assets.xcassets */,
 				2454B4F125D2D8DC00BE9794 /* Info.plist */,
+				24A17C8525DE533F0015AAC4 /* GoogleService-Info.plist */,
 			);
 			path = Todo;
+			sourceTree = "<group>";
+		};
+		248156C225E20D130029249A /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2454B4E425D2D8DB00BE9794 /* MainViewController.swift */,
+				248156BC25E20C5C0029249A /* CalendarViewController.swift */,
+				248156BF25E20C6A0029249A /* TableViewController.swift */,
+			);
+			path = MainViewControllers;
 			sourceTree = "<group>";
 		};
 		24CCC90F25D6C0BC00CDC994 /* AppDelegate */ = {
@@ -95,20 +105,10 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		24CCC91125D6C0D400CDC994 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2454B4E925D2D8DB00BE9794 /* Todo.xcdatamodeld */,
-				24A00EB725D792C80066506B /* PersistenceManager.swift */,
-				24A00EBA25D794FB0066506B /* TodoItem.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		24CCC91225D6C0E200CDC994 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2454B4E425D2D8DB00BE9794 /* MainViewController.swift */,
+				248156C225E20D130029249A /* MainViewControllers */,
 				24CCC91625D6C46B00CDC994 /* NoteViewController.swift */,
 				24A00EBD25D7F8900066506B /* DetailViewController.swift */,
 			);
@@ -201,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2454B4F025D2D8DC00BE9794 /* LaunchScreen.storyboard in Resources */,
+				24A17C8625DE533F0015AAC4 /* GoogleService-Info.plist in Resources */,
 				2454B4ED25D2D8DC00BE9794 /* Assets.xcassets in Resources */,
 				2454B4E825D2D8DB00BE9794 /* Main.storyboard in Resources */,
 			);
@@ -255,14 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A00EBB25D794FB0066506B /* TodoItem.swift in Sources */,
 				2454B4E525D2D8DB00BE9794 /* MainViewController.swift in Sources */,
 				2454B4E125D2D8DB00BE9794 /* AppDelegate.swift in Sources */,
 				2454B4E325D2D8DB00BE9794 /* SceneDelegate.swift in Sources */,
-				24A00EB825D792C90066506B /* PersistenceManager.swift in Sources */,
+				248156C025E20C6A0029249A /* TableViewController.swift in Sources */,
 				24CCC91725D6C46B00CDC994 /* NoteViewController.swift in Sources */,
-				2454B4EB25D2D8DB00BE9794 /* Todo.xcdatamodeld in Sources */,
 				24A00EBE25D7F8900066506B /* DetailViewController.swift in Sources */,
+				248156BD25E20C5C0029249A /* CalendarViewController.swift in Sources */,
 				242A2E4625D903E800A03D0F /* CompleteDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HF833JV2AF;
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HF833JV2AF;
 				INFOPLIST_FILE = Todo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,19 +469,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2454B4E925D2D8DB00BE9794 /* Todo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2454B4EA25D2D8DB00BE9794 /* Todo.xcdatamodel */,
-			);
-			currentVersion = 2454B4EA25D2D8DB00BE9794 /* Todo.xcdatamodel */;
-			path = Todo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2454B4D525D2D8DB00BE9794 /* Project object */;
 }

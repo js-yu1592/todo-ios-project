@@ -6,6 +6,10 @@ target 'Todo' do
   use_frameworks!
   pod 'FSCalendar'
   pod 'JJFloatingActionButton'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
+  pod 'FirebaseFirestoreSwift'
   # Pods for Todo
 
 end

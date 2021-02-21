@@ -38,28 +38,10 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Daa-rF-ezX">
                                 <rect key="frame" x="0.0" y="444" width="414" height="418"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="P0Z-dQ-8Yp" userLabel="Footer">
                                     <rect key="frame" x="0.0" y="153.5" width="414" height="69"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttI-th-44B">
-                                            <rect key="frame" x="104" y="19" width="51" height="31"/>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeA-vZ-MsQ">
-                                            <rect key="frame" x="14" y="9" width="73" height="51"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ZeA-vZ-MsQ" firstAttribute="leading" secondItem="P0Z-dQ-8Yp" secondAttribute="leading" constant="14" id="7iZ-06-uqV"/>
-                                        <constraint firstItem="ttI-th-44B" firstAttribute="centerY" secondItem="ZeA-vZ-MsQ" secondAttribute="centerY" id="Hjg-58-NaT"/>
-                                        <constraint firstItem="ttI-th-44B" firstAttribute="leading" secondItem="ZeA-vZ-MsQ" secondAttribute="trailing" constant="17" id="I9v-uw-Azo"/>
-                                        <constraint firstItem="ZeA-vZ-MsQ" firstAttribute="centerY" secondItem="P0Z-dQ-8Yp" secondAttribute="centerY" id="M8k-C6-enY"/>
-                                        <constraint firstItem="ZeA-vZ-MsQ" firstAttribute="top" secondItem="P0Z-dQ-8Yp" secondAttribute="top" constant="9" id="ovV-ry-eIs"/>
-                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="noteCell" id="KSz-e5-YDq">
@@ -69,10 +51,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0F-0T-16y">
-                                                    <rect key="frame" x="348" y="7" width="46" height="30"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shP-2P-cf7">
                                                     <rect key="frame" x="20" y="22" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -82,10 +60,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="shP-2P-cf7" firstAttribute="leading" secondItem="9KM-2q-Eaj" secondAttribute="leading" constant="20" id="1fR-uy-JsB"/>
-                                                <constraint firstItem="k0F-0T-16y" firstAttribute="centerY" secondItem="9KM-2q-Eaj" secondAttribute="centerY" id="Chq-R5-baO"/>
                                                 <constraint firstItem="shP-2P-cf7" firstAttribute="centerY" secondItem="9KM-2q-Eaj" secondAttribute="centerY" id="Etk-ca-sBi"/>
-                                                <constraint firstAttribute="trailing" secondItem="k0F-0T-16y" secondAttribute="trailing" constant="20" id="agK-uB-zM1"/>
-                                                <constraint firstItem="k0F-0T-16y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="shP-2P-cf7" secondAttribute="trailing" constant="10" id="n8E-dk-X3t"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -96,10 +71,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yZ-H8-Y7f">
-                                                    <rect key="frame" x="348" y="7" width="46" height="30"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP8-Rd-wVz">
                                                     <rect key="frame" x="20" y="22" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -109,9 +80,6 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YP8-Rd-wVz" firstAttribute="leading" secondItem="b0W-w0-BdE" secondAttribute="leading" constant="20" id="6jv-8b-94j"/>
-                                                <constraint firstAttribute="trailing" secondItem="1yZ-H8-Y7f" secondAttribute="trailing" constant="20" id="HwO-96-FZk"/>
-                                                <constraint firstItem="1yZ-H8-Y7f" firstAttribute="centerY" secondItem="b0W-w0-BdE" secondAttribute="centerY" id="R3X-PF-ncp"/>
-                                                <constraint firstItem="1yZ-H8-Y7f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YP8-Rd-wVz" secondAttribute="trailing" constant="10" id="ayR-Sg-1Hm"/>
                                                 <constraint firstItem="YP8-Rd-wVz" firstAttribute="centerY" secondItem="b0W-w0-BdE" secondAttribute="centerY" id="zCI-TN-YkD"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -143,7 +111,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="animationSwitch" destination="ttI-th-44B" id="Kf4-UI-mom"/>
                         <outlet property="calendar" destination="GSN-yB-qSU" id="T7d-zx-trK"/>
                         <outlet property="calendarHeightConstraint" destination="2s9-bQ-a38" id="3JB-uT-5BI"/>
                         <outlet property="tableView" destination="Daa-rF-ezX" id="hLh-S5-vqX"/>
@@ -236,7 +203,7 @@
         <!--Detail View Controller-->
         <scene sceneID="v0e-kT-Lmq">
             <objects>
-                <viewController id="qQH-fq-F0g" customClass="DetailViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="qQH-fq-F0g" customClass="DetailViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gDq-OT-1zK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,6 +217,9 @@
                                         <state key="normal" title="Close">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCloseBtnClicked:" destination="qQH-fq-F0g" eventType="touchUpInside" id="ICZ-33-IdD"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, February 11, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rg-bL-UqL">
                                         <rect key="frame" x="109" y="15" width="176" height="32"/>
@@ -263,6 +233,9 @@
                                         <state key="normal" title="Complete">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCompleteBtnClicked:" destination="qQH-fq-F0g" eventType="touchUpInside" id="2Ef-3d-Rr8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="15" leading="8" bottom="15" trailing="8"/>
@@ -355,6 +328,9 @@
                             <constraint firstItem="1SP-ff-ajq" firstAttribute="top" secondItem="F4b-qh-3ft" secondAttribute="bottom" constant="30" id="yef-uJ-UTE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteContentLabel" destination="mMW-yO-U5Z" id="k4D-3D-Or9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihp-jq-qRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

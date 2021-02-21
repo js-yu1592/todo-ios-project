@@ -31,12 +31,13 @@ class NoteViewController: UIViewController {
     }
     
     @IBAction func onCompleteBtnClicked(_ sender: UIButton) {
-        if noteTextView.text == "" {
-            self.dismiss(animated: true, completion: nil)
-        } else {
+        if noteTextView.text != "Add notes" && noteTextView.text != nil && noteTextView.text != "" {
             print(noteTextView.text!)
             self.dismiss(animated: true, completion: nil)
             completeDelegate?.onCompleteButtonClicked(noteData: noteTextView.text)
+            
+        } else {
+            self.dismiss(animated: true, completion: nil)
             
         }
         
