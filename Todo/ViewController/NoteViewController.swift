@@ -13,7 +13,15 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var noteTextView: UITextView!
     
     var completeDelegate: CompleteDelegate?
-
+    
+    @IBOutlet weak var noteCompleteBtn: UIButton!
+    
+    var stringHolder: String = ""
+    
+    @IBOutlet weak var noteDateLabel: UILabel!
+    
+    var noteDateString: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("NoteViewController - viewDidLoad() called")
@@ -24,23 +32,49 @@ class NoteViewController: UIViewController {
         noteTextView.text = "Add notes"
         noteTextView.textColor = UIColor.lightGray
         
+        noteCompleteBtn.tag = 1
+        
+        if stringHolder != "" {
+            noteTextView.textColor = UIColor.black
+            noteTextView.text = stringHolder
+            stringHolder = ""
+        }
+        
+        
+        let toolBarKeyboard = UIToolbar()
+        toolBarKeyboard.sizeToFit()
+        let btnDoneBar = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneBtnClicked))
+        toolBarKeyboard.items = [btnDoneBar]
+        toolBarKeyboard.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        noteTextView.inputAccessoryView = toolBarKeyboard
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        noteDateLabel.text = noteDateString
+        
     }
+    
+    @objc fileprivate func doneBtnClicked() {
+        self.noteTextView.endEditing(true)
+    }
+    
+    @objc fileprivate func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
     
     @IBAction func onCloseBtnClicked(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onCompleteBtnClicked(_ sender: UIButton) {
-        if noteTextView.text != "Add notes" && noteTextView.text != nil && noteTextView.text != "" {
-            print(noteTextView.text!)
-            self.dismiss(animated: true, completion: nil)
-            completeDelegate?.onCompleteButtonClicked(noteData: noteTextView.text)
-            
-        } else {
-            self.dismiss(animated: true, completion: nil)
-            
-        }
+        print(noteTextView.text!)
+        self.dismiss(animated: true, completion: nil)
         
+        completeDelegate?.onCompleteButtonClicked(noteData: noteTextView.text, date: noteDateString, sender: noteCompleteBtn)
     }
     
     
@@ -48,16 +82,37 @@ class NoteViewController: UIViewController {
 
 // MARK: - UITextViewDelegate
 extension NoteViewController: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
+    
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == "Add notes" && textView.textColor == .lightGray)
+        {
+            textView.text = ""
+            textView.textColor = .black
+            
         }
+        textView.becomeFirstResponder() //Optional
     }
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
             textView.text = "Add notes"
-            textView.textColor = UIColor.lightGray
+            textView.textColor = .lightGray
+            
+        }
+        textView.resignFirstResponder()
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.text! == "" {
+            noteCompleteBtn.isEnabled = false
+            noteCompleteBtn.alpha = 0.5
+        } else {
+            noteCompleteBtn.isEnabled = true
+            noteCompleteBtn.alpha = 1.0
         }
     }
+    
 }

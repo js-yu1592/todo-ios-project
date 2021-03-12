@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 protocol CompleteDelegate {
-    func onCompleteButtonClicked(noteData: String)
+    func onCompleteButtonClicked(noteData: String, date: String, sender: UIButton)
 }

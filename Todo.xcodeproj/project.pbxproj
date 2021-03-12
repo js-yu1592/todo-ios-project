@@ -8,15 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		12CAA38A1AAA20BC43769D2D /* Pods_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9E0632CEBBE16BF3398CFD /* Pods_Todo.framework */; };
+		2415561025E3E821003F4E80 /* MyNextTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2415560F25E3E821003F4E80 /* MyNextTodo.swift */; };
+		241B179525EAAC6F00D78CEA /* DeSelectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241B179425EAAC6F00D78CEA /* DeSelectDelegate.swift */; };
 		242A2E4625D903E800A03D0F /* CompleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A2E4525D903E800A03D0F /* CompleteDelegate.swift */; };
+		2435DA1225F2810000865BF2 /* NotificationPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2435DA1125F2810000865BF2 /* NotificationPopUpViewController.swift */; };
+		2447658425F1FFC2001E4010 /* DetailCalendarPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2447658325F1FFC2001E4010 /* DetailCalendarPopUpViewController.swift */; };
+		244AA9D425EA0D86007F3351 /* TablePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244AA9D325EA0D86007F3351 /* TablePopUpViewController.swift */; };
+		244AA9D725EA14D6007F3351 /* TodoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244AA9D625EA14D6007F3351 /* TodoItemCell.swift */; };
+		244AA9DA25EA1529007F3351 /* TodoItemCellNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244AA9D925EA1529007F3351 /* TodoItemCellNib.xib */; };
+		244AA9DE25EA31BA007F3351 /* PopUpCellNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244AA9DD25EA31BA007F3351 /* PopUpCellNib.xib */; };
+		244AA9E125EA329E007F3351 /* PopUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244AA9E025EA329E007F3351 /* PopUpCell.swift */; };
 		2454B4E125D2D8DB00BE9794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454B4E025D2D8DB00BE9794 /* AppDelegate.swift */; };
 		2454B4E325D2D8DB00BE9794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454B4E225D2D8DB00BE9794 /* SceneDelegate.swift */; };
 		2454B4E525D2D8DB00BE9794 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2454B4E425D2D8DB00BE9794 /* MainViewController.swift */; };
 		2454B4E825D2D8DB00BE9794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4E625D2D8DB00BE9794 /* Main.storyboard */; };
 		2454B4ED25D2D8DC00BE9794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4EC25D2D8DC00BE9794 /* Assets.xcassets */; };
 		2454B4F025D2D8DC00BE9794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2454B4EE25D2D8DC00BE9794 /* LaunchScreen.storyboard */; };
+		247DF21325EF490400C846D9 /* SecondTablePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DF21225EF490400C846D9 /* SecondTablePopUpViewController.swift */; };
+		247DF21625EF496F00C846D9 /* SecondPopUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247DF21525EF496F00C846D9 /* SecondPopUpCell.swift */; };
+		247DF21925EF497F00C846D9 /* SecondPopUpCellNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247DF21825EF497F00C846D9 /* SecondPopUpCellNib.xib */; };
+		2480AD1C25EE7F0000707FA1 /* CalendarPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2480AD1B25EE7F0000707FA1 /* CalendarPopUpViewController.swift */; };
 		248156BD25E20C5C0029249A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248156BC25E20C5C0029249A /* CalendarViewController.swift */; };
 		248156C025E20C6A0029249A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248156BF25E20C6A0029249A /* TableViewController.swift */; };
+		2496D4A025EE247B006E8098 /* ChangeItemStatusDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2496D49F25EE247B006E8098 /* ChangeItemStatusDelegate.swift */; };
 		24A00EBE25D7F8900066506B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A00EBD25D7F8900066506B /* DetailViewController.swift */; };
 		24A17C8625DE533F0015AAC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24A17C8525DE533F0015AAC4 /* GoogleService-Info.plist */; };
 		24CCC91725D6C46B00CDC994 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC91625D6C46B00CDC994 /* NoteViewController.swift */; };
@@ -24,7 +38,16 @@
 
 /* Begin PBXFileReference section */
 		1B9E0632CEBBE16BF3398CFD /* Pods_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2415560F25E3E821003F4E80 /* MyNextTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNextTodo.swift; sourceTree = "<group>"; };
+		241B179425EAAC6F00D78CEA /* DeSelectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeSelectDelegate.swift; sourceTree = "<group>"; };
 		242A2E4525D903E800A03D0F /* CompleteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDelegate.swift; sourceTree = "<group>"; };
+		2435DA1125F2810000865BF2 /* NotificationPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPopUpViewController.swift; sourceTree = "<group>"; };
+		2447658325F1FFC2001E4010 /* DetailCalendarPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalendarPopUpViewController.swift; sourceTree = "<group>"; };
+		244AA9D325EA0D86007F3351 /* TablePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePopUpViewController.swift; sourceTree = "<group>"; };
+		244AA9D625EA14D6007F3351 /* TodoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemCell.swift; sourceTree = "<group>"; };
+		244AA9D925EA1529007F3351 /* TodoItemCellNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoItemCellNib.xib; sourceTree = "<group>"; };
+		244AA9DD25EA31BA007F3351 /* PopUpCellNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpCellNib.xib; sourceTree = "<group>"; };
+		244AA9E025EA329E007F3351 /* PopUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpCell.swift; sourceTree = "<group>"; };
 		2454B4DD25D2D8DB00BE9794 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2454B4E025D2D8DB00BE9794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2454B4E225D2D8DB00BE9794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,8 +56,13 @@
 		2454B4EC25D2D8DC00BE9794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2454B4EF25D2D8DC00BE9794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2454B4F125D2D8DC00BE9794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247DF21225EF490400C846D9 /* SecondTablePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTablePopUpViewController.swift; sourceTree = "<group>"; };
+		247DF21525EF496F00C846D9 /* SecondPopUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPopUpCell.swift; sourceTree = "<group>"; };
+		247DF21825EF497F00C846D9 /* SecondPopUpCellNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondPopUpCellNib.xib; sourceTree = "<group>"; };
+		2480AD1B25EE7F0000707FA1 /* CalendarPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPopUpViewController.swift; sourceTree = "<group>"; };
 		248156BC25E20C5C0029249A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		248156BF25E20C6A0029249A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2496D49F25EE247B006E8098 /* ChangeItemStatusDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeItemStatusDelegate.swift; sourceTree = "<group>"; };
 		24A00EBD25D7F8900066506B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		24A17C8525DE533F0015AAC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24CCC91625D6C46B00CDC994 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +103,7 @@
 		2454B4DF25D2D8DB00BE9794 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				2415560F25E3E821003F4E80 /* MyNextTodo.swift */,
 				24CCC91425D6C10200CDC994 /* View */,
 				24CCC91225D6C0E200CDC994 /* ViewController */,
 				24CCC90F25D6C0BC00CDC994 /* AppDelegate */,
@@ -95,12 +124,46 @@
 			path = MainViewControllers;
 			sourceTree = "<group>";
 		};
+		248490C025EA437700E58F0D /* PopUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				244AA9D325EA0D86007F3351 /* TablePopUpViewController.swift */,
+				247DF21225EF490400C846D9 /* SecondTablePopUpViewController.swift */,
+				2480AD1B25EE7F0000707FA1 /* CalendarPopUpViewController.swift */,
+				2447658325F1FFC2001E4010 /* DetailCalendarPopUpViewController.swift */,
+				2435DA1125F2810000865BF2 /* NotificationPopUpViewController.swift */,
+			);
+			path = PopUpViewController;
+			sourceTree = "<group>";
+		};
+		248490C125EA438C00E58F0D /* PopUpCell */ = {
+			isa = PBXGroup;
+			children = (
+				244AA9E025EA329E007F3351 /* PopUpCell.swift */,
+				244AA9DD25EA31BA007F3351 /* PopUpCellNib.xib */,
+				247DF21525EF496F00C846D9 /* SecondPopUpCell.swift */,
+				247DF21825EF497F00C846D9 /* SecondPopUpCellNib.xib */,
+			);
+			path = PopUpCell;
+			sourceTree = "<group>";
+		};
+		248490C225EA439E00E58F0D /* TodoItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				244AA9D925EA1529007F3351 /* TodoItemCellNib.xib */,
+				244AA9D625EA14D6007F3351 /* TodoItemCell.swift */,
+			);
+			path = TodoItemCell;
+			sourceTree = "<group>";
+		};
 		24CCC90F25D6C0BC00CDC994 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				2454B4E225D2D8DB00BE9794 /* SceneDelegate.swift */,
 				2454B4E025D2D8DB00BE9794 /* AppDelegate.swift */,
 				242A2E4525D903E800A03D0F /* CompleteDelegate.swift */,
+				241B179425EAAC6F00D78CEA /* DeSelectDelegate.swift */,
+				2496D49F25EE247B006E8098 /* ChangeItemStatusDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -111,6 +174,7 @@
 				248156C225E20D130029249A /* MainViewControllers */,
 				24CCC91625D6C46B00CDC994 /* NoteViewController.swift */,
 				24A00EBD25D7F8900066506B /* DetailViewController.swift */,
+				248490C025EA437700E58F0D /* PopUpViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -118,6 +182,8 @@
 		24CCC91425D6C10200CDC994 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				248490C225EA439E00E58F0D /* TodoItemCell */,
+				248490C125EA438C00E58F0D /* PopUpCell */,
 				2454B4E625D2D8DB00BE9794 /* Main.storyboard */,
 				2454B4EE25D2D8DC00BE9794 /* LaunchScreen.storyboard */,
 			);
@@ -204,6 +270,9 @@
 				24A17C8625DE533F0015AAC4 /* GoogleService-Info.plist in Resources */,
 				2454B4ED25D2D8DC00BE9794 /* Assets.xcassets in Resources */,
 				2454B4E825D2D8DB00BE9794 /* Main.storyboard in Resources */,
+				247DF21925EF497F00C846D9 /* SecondPopUpCellNib.xib in Resources */,
+				244AA9DE25EA31BA007F3351 /* PopUpCellNib.xib in Resources */,
+				244AA9DA25EA1529007F3351 /* TodoItemCellNib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,13 +325,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244AA9D725EA14D6007F3351 /* TodoItemCell.swift in Sources */,
+				2435DA1225F2810000865BF2 /* NotificationPopUpViewController.swift in Sources */,
+				2496D4A025EE247B006E8098 /* ChangeItemStatusDelegate.swift in Sources */,
 				2454B4E525D2D8DB00BE9794 /* MainViewController.swift in Sources */,
+				2415561025E3E821003F4E80 /* MyNextTodo.swift in Sources */,
 				2454B4E125D2D8DB00BE9794 /* AppDelegate.swift in Sources */,
 				2454B4E325D2D8DB00BE9794 /* SceneDelegate.swift in Sources */,
+				247DF21325EF490400C846D9 /* SecondTablePopUpViewController.swift in Sources */,
 				248156C025E20C6A0029249A /* TableViewController.swift in Sources */,
 				24CCC91725D6C46B00CDC994 /* NoteViewController.swift in Sources */,
+				244AA9D425EA0D86007F3351 /* TablePopUpViewController.swift in Sources */,
+				247DF21625EF496F00C846D9 /* SecondPopUpCell.swift in Sources */,
 				24A00EBE25D7F8900066506B /* DetailViewController.swift in Sources */,
+				2480AD1C25EE7F0000707FA1 /* CalendarPopUpViewController.swift in Sources */,
 				248156BD25E20C5C0029249A /* CalendarViewController.swift in Sources */,
+				2447658425F1FFC2001E4010 /* DetailCalendarPopUpViewController.swift in Sources */,
+				241B179525EAAC6F00D78CEA /* DeSelectDelegate.swift in Sources */,
+				244AA9E125EA329E007F3351 /* PopUpCell.swift in Sources */,
 				242A2E4625D903E800A03D0F /* CompleteDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

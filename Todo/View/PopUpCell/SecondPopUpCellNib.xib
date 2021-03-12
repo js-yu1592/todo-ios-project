@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="102" id="z1o-UI-zca" customClass="SecondPopUpCell" customModule="Todo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z1o-UI-zca" id="QjK-Ic-R2E">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-Bi-zMN">
+                        <rect key="frame" x="186" y="40.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MVE-Bi-zMN" firstAttribute="centerY" secondItem="QjK-Ic-R2E" secondAttribute="centerY" id="ccm-ft-7wQ"/>
+                    <constraint firstItem="MVE-Bi-zMN" firstAttribute="centerX" secondItem="QjK-Ic-R2E" secondAttribute="centerX" id="wcK-1y-ihO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="secondPopUpCellLabel" destination="MVE-Bi-zMN" id="oU6-vy-enD"/>
+            </connections>
+            <point key="canvasLocation" x="195.6521739130435" y="77.008928571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
