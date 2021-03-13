@@ -28,6 +28,7 @@
 - notification에 관한 내용을 firestore에 저장
 - 코드 정리
 - MVC pattern 적용해보기
+- keyboard textview
 
 ### Reference
 - https://github.com/WenchaoD/FSCalendar
